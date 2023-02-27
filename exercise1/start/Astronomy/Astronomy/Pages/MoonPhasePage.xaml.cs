@@ -41,4 +41,6 @@ public partial class MoonPhasePage : ContentPage
             { MoonPhaseCalculator.Phase.LastQuarter, "🌗" },
             { MoonPhaseCalculator.Phase.WaningCrescent, "🌘" },
         };
+
+
 }

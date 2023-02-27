@@ -1,5 +1,6 @@
 namespace Astronomy.Pages;
 
+[QueryProperty(nameof(AstroName), "astroName")]
 public partial class AstronomicalBodyPage : ContentPage
 {
 
@@ -31,5 +32,18 @@ public partial class AstronomicalBodyPage : ContentPage
             "sun" => SolarSystemData.Sun,
             _ => throw new ArgumentException()
         };
+    }
+
+    string astroName;
+    public string AstroName
+    {
+        get => astroName;
+        set
+        {
+            astroName = value;
+
+            // this is a custom function to update the UI immediately
+            UpdateAstroBodyUI(astroName);
+        }
     }
 }
