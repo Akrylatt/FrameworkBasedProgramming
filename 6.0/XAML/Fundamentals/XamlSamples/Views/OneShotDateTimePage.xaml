@@ -10,5 +10,7 @@
         <Label Text="{Binding StringFormat='The month is {0:MMMM}'}" />
         <Label Text="{Binding Day, StringFormat='The day is {0}'}" />
         <Label Text="{Binding StringFormat='The time is {0:T}'}" />
+        <Label Text="Adela Krylova" />
+        <Label Text="5999222017"/>
     </StackLayout>
 </ContentPage>

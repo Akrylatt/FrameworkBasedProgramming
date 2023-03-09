@@ -8,22 +8,29 @@
         <local:HslViewModel Color="Aqua" />
     </ContentPage.BindingContext>
 
-    <VerticalStackLayout Padding="10, 0, 10, 30">
-        <BoxView Color="{Binding Color}"
+
+    <StackLayout>
+        <VerticalStackLayout Padding="10, 0, 10, 30">
+            <BoxView Color="{Binding Color}"
                  HeightRequest="100"
                  WidthRequest="100"
                  HorizontalOptions="Center" />
-        <Label Text="{Binding Hue, StringFormat='Hue = {0:F2}'}"
+            <Label Text="{Binding Hue, StringFormat='Hue = {0:F2}'}"
                HorizontalOptions="Center" />
-        <Slider Value="{Binding Hue}"
+            <Slider Value="{Binding Hue}"
                 Margin="20,0,20,0" />
-        <Label Text="{Binding Saturation, StringFormat='Saturation = {0:F2}'}"
+            <Label Text="{Binding Saturation, StringFormat='Saturation = {0:F2}'}"
                HorizontalOptions="Center" />
-        <Slider Value="{Binding Saturation}"
+            <Slider Value="{Binding Saturation}"
                 Margin="20,0,20,0" />
-        <Label Text="{Binding Luminosity, StringFormat='Luminosity = {0:F2}'}"
+            <Label Text="{Binding Luminosity, StringFormat='Luminosity = {0:F2}'}"
                HorizontalOptions="Center" />
-        <Slider Value="{Binding Luminosity}"
+            <Slider Value="{Binding Luminosity}"
                 Margin="20,0,20,0" />
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+        <Label Text="Adela Krylova"  HorizontalOptions="Center" TextColor="{Binding Color}"/>
+        <Label Text="5999222017" HorizontalOptions="Center" TextColor="{Binding Color}"/>
+    </StackLayout>
+
+
 </ContentPage>
