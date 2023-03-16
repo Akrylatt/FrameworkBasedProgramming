@@ -4,13 +4,13 @@ namespace MonkeyFinder.ViewModel;
 
 public partial class MonkeysViewModel : BaseViewModel
 {
-    public ObservableCollection<Monkey> Monkeys { get; } = new();
+    public ObservableCollection<Country> Monkeys { get; } = new();
     MonkeyService monkeyService;
     IConnectivity connectivity;
     IGeolocation geolocation;
     public MonkeysViewModel(MonkeyService monkeyService, IConnectivity connectivity, IGeolocation geolocation)
     {
-        Title = "Monkey Finder";
+        Title = "Country Finder";
         this.monkeyService = monkeyService;
         this.connectivity = connectivity;
         this.geolocation = geolocation;
@@ -46,7 +46,7 @@ public partial class MonkeysViewModel : BaseViewModel
         }
         catch (Exception ex)
         {
-            Debug.WriteLine($"Unable to get monkeys: {ex.Message}");
+            Debug.WriteLine($"Unable to get countries: {ex.Message}");
             await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
         }
         finally
@@ -58,14 +58,14 @@ public partial class MonkeysViewModel : BaseViewModel
     }
     
     [RelayCommand]
-    async Task GoToDetails(Monkey monkey)
+    async Task GoToDetails(Country monkey)
     {
         if (monkey == null)
         return;
 
         await Shell.Current.GoToAsync(nameof(DetailsPage), true, new Dictionary<string, object>
         {
-            {"Monkey", monkey }
+            {"Country", monkey }
         });
     }
 
@@ -90,11 +90,11 @@ public partial class MonkeysViewModel : BaseViewModel
 
             // Find closest monkey to us
             var first = Monkeys.OrderBy(m => location.CalculateDistance(
-                new Location(m.Latitude, m.Longitude), DistanceUnits.Miles))
+                new Location(m.latitude, m.longitude), DistanceUnits.Miles))
                 .FirstOrDefault();
 
-            await Shell.Current.DisplayAlert("", first.Name + " " +
-                first.Location, "OK");
+            await Shell.Current.DisplayAlert("", first.name + " " +
+                first.region, "OK");
 
         }
         catch (Exception ex)

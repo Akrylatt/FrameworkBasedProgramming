@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewmodel="clr-namespace:MonkeyFinder.ViewModel"
-    Title="{Binding Monkey.Name}"
+    Title="{Binding Country.name}"
     x:DataType="viewmodel:MonkeyDetailsViewModel">
     <ScrollView>
                 <Grid RowDefinitions="Auto,Auto,*">
@@ -22,19 +22,14 @@
                     Margin="0,8,0,0"
                     HorizontalOptions="Center"
                     VerticalOptions="Center">
-                    <Image Aspect="AspectFill"
-                        HeightRequest="160"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        Source="{Binding Monkey.Image}"
-                        WidthRequest="160"/>
+                    
             </Border>
 
             <Label Style="{StaticResource LargeLabel}" 
                    Grid.Row="1"
                    TextColor="White"
                    FontAttributes="Bold"
-                   Text="{Binding Monkey.Name}" 
+                   Text="{Binding Country.name}" 
                    HorizontalOptions="Center"
                    Margin="0,0,0,8"/>
 
@@ -47,9 +42,8 @@
                         Margin="8"
                         Style="{StaticResource ButtonOutline}"/>
 
-                <Label Style="{StaticResource MediumLabel}" Text="{Binding Monkey.Details}" />
-                <Label Style="{StaticResource SmallLabel}" Text="{Binding Monkey.Location, StringFormat='Location: {0}'}" />
-                <Label Style="{StaticResource SmallLabel}" Text="{Binding Monkey.Population, StringFormat='Population: {0}'}" />
+                <Label Style="{StaticResource MediumLabel}" Text="{Binding Country.currency}" />
+               
             </VerticalStackLayout>
         </Grid>
     </ScrollView>

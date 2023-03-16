@@ -7,7 +7,7 @@
     xmlns:viewmodel="clr-namespace:MonkeyFinder.ViewModel"
     xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
     ios:Page.UseSafeArea="True"
-    Title="Monkeys"
+    Title="Countries"
     x:DataType="viewmodel:MonkeysViewModel">
     <Grid
         ColumnDefinitions="*,*"
@@ -36,7 +36,7 @@
                         <GridItemsLayout  Orientation="Horizontal" Span="3"/>
                     </CollectionView.ItemsLayout>-->
                     <CollectionView.ItemTemplate>
-                        <DataTemplate x:DataType="model:Monkey">
+                        <DataTemplate x:DataType="model:Country">
                             <Grid Padding="10">
                                 <Frame HeightRequest="125" Style="{StaticResource CardView}">
                                     <Frame.GestureRecognizers>
@@ -45,17 +45,13 @@
                                             CommandParameter="{Binding .}"/>
                                     </Frame.GestureRecognizers>
                                     <Grid Padding="0" ColumnDefinitions="125,*">
-                                        <Image
-                                            Aspect="AspectFill"
-                                            HeightRequest="125"
-                                            Source="{Binding Image}"
-                                            WidthRequest="125" />
+                                   
                                         <VerticalStackLayout
                                             Grid.Column="1"
                                             VerticalOptions="Center"
                                             Padding="10">
-                                            <Label Style="{StaticResource LargeLabel}" Text="{Binding Name}" />
-                                            <Label Style="{StaticResource MediumLabel}" Text="{Binding Location}" />
+                                            <Label Style="{StaticResource LargeLabel}" Text="{Binding name}" />
+                                            <Label Style="{StaticResource MediumLabel}" Text="{Binding capital}" />
                                         </VerticalStackLayout>
                                     </Grid>
                                 </Frame>
@@ -73,7 +69,7 @@
             Command="{Binding GetMonkeysCommand}"
             IsEnabled="{Binding IsNotBusy}"
             Style="{StaticResource ButtonOutline}"
-            Text="Get Monkeys" />
+            Text="Get Countries" />
 
         <!--  Add this  -->
         <Button
@@ -83,7 +79,7 @@
             Command="{Binding GetClosestMonkeyCommand}"
             IsEnabled="{Binding IsNotBusy}"
             Style="{StaticResource ButtonOutline}"
-            Text="Find Closest" />
+            Text="Find Closest Country" />
 
 
         <ActivityIndicator

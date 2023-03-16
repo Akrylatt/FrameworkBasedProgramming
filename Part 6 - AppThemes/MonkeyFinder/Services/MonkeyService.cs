@@ -10,11 +10,11 @@ public class MonkeyService
         this.httpClient = new HttpClient();
     }
 
-    List<Monkey> monkeyList;
-    public async Task<List<Monkey>> GetMonkeys()
+    List<Country> countryList;
+    public async Task<List<Country>> GetMonkeys()
     {
-        if (monkeyList?.Count > 0)
-            return monkeyList;
+        if (countryList?.Count > 0)
+            return countryList;
 
         // Online
         /*var response = await httpClient.GetAsync("https://www.montemagno.com/monkeys.json");
@@ -24,11 +24,11 @@ public class MonkeyService
         }*/
 
         // Offline
-        using var stream = await FileSystem.OpenAppPackageFileAsync("monkeydata.json");
+        using var stream = await FileSystem.OpenAppPackageFileAsync("countries.json");
         using var reader = new StreamReader(stream);
         var contents = await reader.ReadToEndAsync();
-        monkeyList = JsonSerializer.Deserialize<List<Monkey>>(contents);
+        countryList = JsonSerializer.Deserialize<List<Country>>(contents);
 
-        return monkeyList;
+        return countryList;
     }
 }

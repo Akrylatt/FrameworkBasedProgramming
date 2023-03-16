@@ -1,6 +1,6 @@
 ﻿namespace MonkeyFinder.ViewModel;
 
-[QueryProperty(nameof(Monkey), "Monkey")]
+[QueryProperty(nameof(Country), "Country")]
 public partial class MonkeyDetailsViewModel : BaseViewModel
 {
     IMap map;
@@ -10,16 +10,16 @@ public partial class MonkeyDetailsViewModel : BaseViewModel
     }
 
     [ObservableProperty]
-    Monkey monkey;
+    Country country;
 
     [RelayCommand]
     async Task OpenMap()
     {
         try
         {
-            await map.OpenAsync(Monkey.Latitude, Monkey.Longitude, new MapLaunchOptions
+            await map.OpenAsync(Country.latitude, Country.longitude, new MapLaunchOptions
             {
-                Name = Monkey.Name,
+                Name = Country.name,
                 NavigationMode = NavigationMode.None
             });
         }
