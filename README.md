@@ -1,28 +1,9 @@
-# Blazor - app building workshop
-
-Welcome to the Blazor app building workshop! 
-
-Blazor is a single-page app framework for building client-side web apps using .NET and WebAssembly. In this workshop we will build a complete Blazor app and learn about the various Blazor framework features along the way.
-
-![Blazing Pizza](https://user-images.githubusercontent.com/1874516/77244515-c889ce00-6bd2-11ea-9a45-47452c084464.png)
-
-
-## Getting Started
-
-Go ahead and clone this repo to your machine, then dive in and [get started](/docs/00-get-started.md)!
-
-## Sessions
-
-| Session | Topics |
-| ----- | ---- |
-| [Session #0](/docs/00-get-started.md) | Get bits installed and build your first Blazor app |
-| [Session #1](/docs/01-components-and-layout.md) | Get started with components, create the app layout |
-| [Session #2](/docs/02-customize-a-pizza.md) | Add customized pizzas to orders  |
-| [Session #3](/docs/03-show-order-status.md) | Show order status |
-| [Session #4](/docs/04-refactor-state-management.md) | Refactor state management |
-| [Session #5](/docs/05-checkout-with-validation.md) | Checkout with validation |
-| [Session #6](/docs/06-authentication-and-authorization.md) | Authenticate users and authorize access to order status |
-| [Session #7](/docs/07-javascript-interop.md) | Track order status on a real time map |
-| [Session #8](/docs/08-templated-components.md) | Create and use components with template parameters |
-| [Session #9](/docs/09-progressive-web-app.md) | Progressive Web App (PWA) features |
-| [Session #10](/docs/10-publish-and-deploy.md) | Deploy your app to Azure |
+![Screenshot 2023-03-30 145031](https://user-images.githubusercontent.com/61365844/228771177-b5480979-78ce-4ad3-b4fb-21eccda1b815.png)
+![Screenshot 2023-03-30 145338](https://user-images.githubusercontent.com/61365844/228771192-e45ef9df-a209-4174-9011-e5f099509086.png)
+![Screenshot 2023-03-30 150218](https://user-images.githubusercontent.com/61365844/228771196-1b3ab513-29df-4f11-8e02-18892821cd5d.png)
+![Screenshot 2023-03-30 150301](https://user-images.githubusercontent.com/61365844/228771200-16ac4899-c0a3-4d7b-b9da-e6d9984fb9bf.png)
+![Screenshot 2023-03-30 150359](https://user-images.githubusercontent.com/61365844/228771210-b81c2ba0-732e-4430-a7c8-e27d28006323.png)
+![Screenshot 2023-03-30 150422](https://user-images.githubusercontent.com/61365844/228771214-9b34ee35-0209-4863-b040-e4040ab4824c.png)
+![Screenshot 2023-03-30 150530](https://user-images.githubusercontent.com/61365844/228771225-a945dc2f-8940-47d5-b575-ceff99ecfe91.png)
+![Screenshot 2023-03-30 144838](https://user-images.githubusercontent.com/61365844/228771232-fc91969e-e0b2-4824-9d4f-c9f0319a92b8.png)
+![Screenshot 2023-03-30 144959](https://user-images.githubusercontent.com/61365844/228771240-fa8a456b-a91b-43ec-a59b-07b7a9e12839.png)
