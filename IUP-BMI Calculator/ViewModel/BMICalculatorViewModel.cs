@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IUP_BMI_Calculator.Repository;
+
 
 namespace IUP_BMI_Calculator.ViewModel
 {
@@ -42,19 +44,23 @@ namespace IUP_BMI_Calculator.ViewModel
                     return "Obese";
             }
         }
-        
+
+        /*Complete the ViewModel\BMICalculatorViewModel.cs so it can be used for handling data
+input inside the view*/
+
         [RelayCommand]
-        public void Save()
-        {
-            // TO DO
-            App.
+        public void Save() {
+            App.repository.AddNewBMIResult(Name, Height, Weight, BMIScore, BMIResult);
+            
 
         }
 
         [RelayCommand]
-        public void Clear()
-        {
-            // TODO
+        public void Clear() {
+            Name = "";
+            Height = 0;
+            Weight = 0;
+            
         }
 
     }

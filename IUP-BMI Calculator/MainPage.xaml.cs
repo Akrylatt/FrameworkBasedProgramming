@@ -7,8 +7,11 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-		// TODO
-	}
+        // TODO  Use the appropriate ViewModels as BindingContext
+       
+        this.BindingContext = new BMICalculatorViewModel();
+
+    }
 
 }
 
